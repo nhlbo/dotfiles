@@ -1,0 +1,3 @@
+https://vi.stackexchange.com/questions/514/how-do-i-change-the-current-splits-width-and-height
+https://evertpot.com/osx-tmux-vim-copy-paste-clipboard/
+https://thurlow.io/macos/2018/04/13/how-to-forward-command-shortcuts-to-iterm-as-ctrl-shortcuts.html

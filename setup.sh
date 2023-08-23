@@ -22,3 +22,6 @@ cp -a fonts/SF-Mono-Nerd-Font/*.otf ~/Library/Fonts/
 # Install tmux
 brew install tmux
 cp .tmux.conf $HOME
+
+# Install NvChad
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim

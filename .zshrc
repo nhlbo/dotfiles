@@ -103,7 +103,3 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias g++=g++-12
-
-export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"

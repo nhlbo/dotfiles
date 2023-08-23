@@ -1,0 +1,3 @@
+[submodule "fonts/SF-Mono-Nerd-Font"]
+	path = fonts/SF-Mono-Nerd-Font
+	url = git@github.com:epk/SF-Mono-Nerd-Font.git

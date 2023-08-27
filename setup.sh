@@ -26,3 +26,6 @@ cp .tmux.conf $HOME
 
 # Install NvChad
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+
+# Copy neovim config
+cp custom/ ~/.config/nvim/lua/custom/

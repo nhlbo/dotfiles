@@ -10,6 +10,7 @@ vim.o.autoread = true
 vim.cmd[[
   autocmd CursorHold * checktime
 ]]
+vim.wo.relativenumber = true
 vim.api.nvim_set_keymap("v", "<M-c>", '"+y', { noremap = true })
 for i = 1, 9, 1 do
     vim.keymap.set("n", string.format("<M-%s>", i), function()

@@ -11,6 +11,10 @@ M.ui = {
   hl_override = highlights.override,
   hl_add = highlights.add,
 
+  tabufline = {
+    lazyload = false
+  },
+
   statusline = {
     theme = "minimal", -- default/vscode/vscode_colored/minimal
 

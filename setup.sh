@@ -28,6 +28,8 @@ brew install tmux
 rm -rf ~/.tmux.conf
 cp .tmux.conf $HOME
 
+brew install ripgrep
+
 # Install NvChad
 brew install neovim
 rm -rf ~/.config/nvim/

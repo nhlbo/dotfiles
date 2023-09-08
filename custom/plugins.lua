@@ -22,6 +22,11 @@ local plugins = {
     end, -- Override to setup mason-lspconfig
   },
 
+  {
+    "NvChad/nvterm",
+    opts = require "custom.configs.nvterm"
+  },
+
   -- override plugin configs
   {
     "williamboman/mason.nvim",

@@ -20,11 +20,3 @@ for i = 1, 9, 1 do
         end
     end)
 end
-for i = 1, 9, 1 do
-    vim.keymap.set("n", string.format("<M-%s>", i), function()
-        local buf = vim.t.bufs[i]
-        if buf and vim.api.nvim_buf_is_valid(buf) then
-            vim.api.nvim_set_current_buf(buf)
-        end
-    end)
-end

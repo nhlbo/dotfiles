@@ -17,13 +17,15 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM}/plugins
 git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM}/plugins/zsh-vi-mode
 
 # Copy ZSH file
-cp .zshrc $HOME
+rm -rf ~/.zshrc
+ln .zshrc ~/.zshrc
 
 # Copy fonts
 cp -a fonts/SFMono-Nerd-Font-Ligaturized/*.otf ~/Library/Fonts/
 
 # Install tmux
 brew install tmux
+rm -rf ~/.tmux.conf
 cp .tmux.conf $HOME
 
 # Install NvChad
@@ -32,4 +34,5 @@ rm -rf ~/.config/nvim/
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 
 # Copy neovim config
-cp -r -f custom/ ~/.config/nvim/lua/custom/
+rm -rf ~/.config/nvim/lua/custom/
+ln -s "$(pwd)/custom" ~/.config/nvim/lua/

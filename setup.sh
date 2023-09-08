@@ -27,6 +27,7 @@ brew install tmux
 cp .tmux.conf $HOME
 
 # Install NvChad
+brew install neovim
 rm -rf ~/.config/nvim/
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 

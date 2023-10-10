@@ -28,8 +28,6 @@ brew install tmux
 rm -rf ~/.tmux.conf
 cp .tmux.conf $HOME
 
-brew install ripgrep
-
 # Install NvChad
 brew install neovim
 rm -rf ~/.config/nvim/
@@ -38,3 +36,10 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 # Copy neovim config
 rm -rf ~/.config/nvim/lua/custom/
 ln -s "$(pwd)/custom" ~/.config/nvim/lua/
+
+# Install dev environments
+brew install node
+brew install gcc
+mkdir -p ~/Library/Preferences/clangd/
+ln config.yaml ~/Library/Preferences/clangd/config.yaml
+brew install ripgrep

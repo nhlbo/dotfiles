@@ -11,7 +11,12 @@ vim.cmd[[
   autocmd CursorHold * checktime
 ]]
 vim.wo.relativenumber = true
-vim.api.nvim_set_keymap("v", "<M-c>", '"+y', { noremap = true })
+-- for normal mode
+vim.api.nvim_set_keymap('n', '<Tab>', 'V>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-Tab>', 'V<', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('x', '<Tab>', '>gv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('x', '<S-Tab>', '<gv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<S-Tab>', '<C-d>', { noremap = true, silent = true })
 for i = 1, 9, 1 do
     vim.keymap.set("n", string.format("<M-%s>", i), function()
         local buf = vim.t.bufs[i]

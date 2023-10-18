@@ -11,17 +11,20 @@ vim.cmd[[
   autocmd CursorHold * checktime
 ]]
 vim.wo.relativenumber = true
--- for normal mode
-vim.api.nvim_set_keymap('n', '<Tab>', 'V>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<S-Tab>', 'V<', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('x', '<Tab>', '>gv', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('x', '<S-Tab>', '<gv', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<S-Tab>', '<C-d>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<c-c>", "y", { silent = true })
+vim.api.nvim_set_keymap("n", "<bs>", "hx", { silent = true })
+vim.api.nvim_set_keymap("v", "<bs>", "\"_d", { silent = true })
+vim.api.nvim_set_keymap("n", "<c-s>", ":w<cr>", { silent = true })
+-- vim.api.nvim_set_keymap("n", "<Tab>", ">>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<S-Tab>", "<<", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "<tab>", ">gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "<s-tab>", "<gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<s-tab>", "<c-d>", { noremap = true, silent = true })
 for i = 1, 9, 1 do
-    vim.keymap.set("n", string.format("<M-%s>", i), function()
-        local buf = vim.t.bufs[i]
-        if buf and vim.api.nvim_buf_is_valid(buf) then
-            vim.api.nvim_set_current_buf(buf)
-        end
-    end)
+  vim.keymap.set("n", string.format("<c-t>%s", i), function()
+      local buf = vim.t.bufs[i]
+      if buf and vim.api.nvim_buf_is_valid(buf) then
+          vim.api.nvim_set_current_buf(buf)
+      end
+  end)
 end

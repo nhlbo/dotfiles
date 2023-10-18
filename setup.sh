@@ -36,6 +36,7 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 # Copy neovim config
 rm -rf ~/.config/nvim/lua/custom/
 ln -s "$(pwd)/custom" ~/.config/nvim/lua/
+ln -s "$(pwd)/kitty" ~/.config/
 
 # Install dev environments
 brew install node

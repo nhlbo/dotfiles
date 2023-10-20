@@ -27,9 +27,7 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
-					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-					-- on later neovim version, you should use vim.lsp.buf.format({ async = false }) nstead
-					vim.lsp.buf.format({ async = true })
+					vim.lsp.buf.format()
 				end,
 			})
 		end

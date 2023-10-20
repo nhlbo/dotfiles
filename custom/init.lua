@@ -11,12 +11,24 @@ vim.cmd([[
   autocmd CursorHold * checktime
 ]])
 vim.wo.relativenumber = true
-vim.api.nvim_set_keymap("v", "<c-c>", "y", { silent = true })
-vim.api.nvim_set_keymap("n", "<bs>", "hx", { silent = true })
-vim.api.nvim_set_keymap("v", "<bs>", '"_d', { silent = true })
-vim.api.nvim_set_keymap("n", "<c-s>", ":w<cr>", { silent = true })
--- vim.api.nvim_set_keymap("n", "<Tab>", ">>", { noremap = true, silent = true })
--- vim.api.nvim_set_keymap("n", "<S-Tab>", "<<", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("", "<c-c>", "y", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "<c-c>", "y", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("n", "<bs>", "hx", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<bs>", '"_d', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("", "<m-a>", "ggVG", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<m-a>", "<esc>ggVG", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("!", "<m-a>", "<esc>ggVG", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<m-a>", "<esc>ggVG", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<m-a>", "<esc>ggVG", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("", "<m-s>", ":w<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("!", "<m-s>", "<esc>:w<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<m-s>", "<esc>:w<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<m-s>", "<esc>:w<cr>", { noremap = true, silent = true })
+
 vim.api.nvim_set_keymap("x", "<tab>", ">gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("x", "<s-tab>", "<gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<s-tab>", "<c-d>", { noremap = true, silent = true })

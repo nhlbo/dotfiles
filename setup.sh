@@ -33,14 +33,15 @@ brew install neovim
 rm -rf ~/.config/nvim/
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 
-# Copy neovim config
+# Copy .config
 rm -rf ~/.config/nvim/lua/custom/
-ln -s "$(pwd)/custom" ~/.config/nvim/lua/
-ln -s "$(pwd)/kitty" ~/.config/
+ln -s "$(pwd)/.config/nvim/lua/custom" ~/.config/nvim/lua/
+rm -rf ~/.config/kitty
+ln -s "$(pwd)/.config/kitty" ~/.config/
 
 # Install dev environments
 brew install node
 brew install gcc
-mkdir -p ~/Library/Preferences/clangd/
-ln config.yaml ~/Library/Preferences/clangd/config.yaml
+rm -rf ~/Library/Preferences/clangd
+ln -s "$(pwd)/clangd" ~/Library/Preferences/
 brew install ripgrep

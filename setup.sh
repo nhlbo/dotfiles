@@ -15,10 +15,13 @@ ZSH_CUSTOM=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" <<< "exit"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM}/plugins/zsh-autosuggestions
 git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM}/plugins/zsh-vi-mode
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM}/themes/powerlevel10k
 
 # Copy ZSH file
 rm -rf ~/.zshrc
 ln .zshrc ~/.zshrc
+rm -rf ~/.p10k.zsh
+ln .p10k.zsh ~/.p10k.zsh
 
 # Copy fonts
 cp -a fonts/SFMono-Nerd-Font-Ligaturized/*.otf ~/Library/Fonts/

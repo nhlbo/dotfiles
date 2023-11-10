@@ -1,5 +1,18 @@
 #!/usr/bin/env bash
 
+# Show hidden files
+defaults write com.apple.Finder AppleShowAllFiles true
+
+# Turn off gatekeeper
+sudo spctl --master-disable
+
+# Install xcode
+xcode-select --install
+
+# Set up ssh
+mkdir -p "${HOME}/.ssh"
+ssh-keygen -t rsa -f "${HOME}/.ssh/id_rsa"
+
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/nhlbo/.zprofile

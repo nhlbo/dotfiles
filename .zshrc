@@ -114,7 +114,6 @@ alias g++=g++-13
 
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-export CPLUS_INCLUDE_PATH="/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -59,7 +59,4 @@ ln -s "$(pwd)/.config/kitty" ~/.config/
 
 # Install dev environments
 brew install node
-brew install gcc
-rm -rf ~/Library/Preferences/clangd
-ln -s "$(pwd)/clangd" ~/Library/Preferences/
 brew install ripgrep

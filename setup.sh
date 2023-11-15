@@ -10,8 +10,10 @@ sudo spctl --master-disable
 xcode-select --install
 
 # Set up ssh
-mkdir -p "${HOME}/.ssh"
-ssh-keygen -t rsa -f "${HOME}/.ssh/id_rsa"
+if [ ! -d "${HOME}/.ssh" ]; then
+    mkdir -p "${HOME}/.ssh"
+    ssh-keygen -t rsa -f "${HOME}/.ssh/id_rsa"
+fi
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

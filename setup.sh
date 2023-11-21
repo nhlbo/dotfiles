@@ -39,7 +39,8 @@ rm -rf ~/.p10k.zsh
 ln .p10k.zsh ~/.p10k.zsh
 
 # Copy fonts
-cp -a fonts/SFMono-Nerd-Font-Ligaturized/*.otf ~/Library/Fonts/
+brew tap shaunsingh/SFMono-Nerd-Font-Ligaturized
+brew install --cask font-sf-mono-nerd-font-ligaturized
 
 # Install tmux
 brew install tmux

@@ -6,9 +6,6 @@ defaults write com.apple.Finder AppleShowAllFiles true
 # Turn off gatekeeper
 sudo spctl --master-disable
 
-# Install xcode
-xcode-select --install
-
 # Set up ssh
 if [ ! -d "${HOME}/.ssh" ]; then
     mkdir -p "${HOME}/.ssh"

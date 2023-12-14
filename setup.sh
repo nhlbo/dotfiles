@@ -58,4 +58,3 @@ ln -s "$(pwd)/.config/kitty" ~/.config/
 # Install dev environments
 brew install node
 brew install ripgrep
-brew install gcc

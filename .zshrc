@@ -1,5 +1,12 @@
-if [ "$TMUX" = "" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
-  tmux attach || tmux;
+if [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
+  sessions=$(tmux list-sessions -F "#{session_name}" | grep -v "^vscode")
+
+  if [[ -z "$sessions" ]]; then
+    tmux
+  fi
+
+  first_session=$(echo "$sessions" | head -n 1)
+  tmux attach -t $first_session
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.

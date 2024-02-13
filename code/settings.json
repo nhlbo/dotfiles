@@ -15,11 +15,20 @@
     },
     "terminal.integrated.macOptionClickForcesSelection": true,
     "terminal.integrated.profiles.osx": {
+        // "tmux-shell": {
+        //   "path": "zsh",
+        //   "args": [
+        //     "-c",
+        //     "tmux new -ADs vscode-${PWD##*/}"
+        //   ]
+        // },
         "tmux-shell": {
-            "path": "zsh",
+            "path": "tmux",
             "args": [
-                "-c",
-                "SESSION=\"vscode-`basename \"$PWD\"`\"\ntmux attach-session -d -t $SESSION || tmux new-session -s $SESSION"
+                "new-session",
+                "-A",
+                "-s",
+                "vscode-${workspaceFolderBasename}",
             ]
         }
     },
@@ -47,5 +56,5 @@
             ],
             "env": {}
         }
-    ],
+    ]
 }

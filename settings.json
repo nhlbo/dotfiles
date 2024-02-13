@@ -19,7 +19,7 @@
             "path": "zsh",
             "args": [
                 "-c",
-                "SESSION=\"vscode-`pwd | md5 | cut -c1-7`\"\ntmux attach-session -d -t $SESSION || tmux new-session -s $SESSION"
+                "SESSION=\"vscode-`basename \"$PWD\"`\"\ntmux attach-session -d -t $SESSION || tmux new-session -s $SESSION"
             ]
         }
     },

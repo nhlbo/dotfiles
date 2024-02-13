@@ -1,0 +1,51 @@
+{
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "Catppuccin Frappé",
+    "editor.lineNumbers": "relative",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": "explicit",
+        "source.addMissingImports": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "terminal.integrated.macOptionClickForcesSelection": true,
+    "terminal.integrated.profiles.osx": {
+        "tmux-shell": {
+            "path": "zsh",
+            "args": [
+                "-c",
+                "SESSION=\"vscode-`pwd | md5 | cut -c1-7`\"\ntmux attach-session -d -t $SESSION || tmux new-session -s $SESSION"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.osx": "tmux-shell",
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google }",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        }
+    ],
+}

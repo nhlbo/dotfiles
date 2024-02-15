@@ -12,7 +12,7 @@ if [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
 fi
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config ~/M365Princess.omp.json)"
+  eval "$(oh-my-posh init zsh)"
 fi
 
 # If you come from bash you might have to change your $PATH.

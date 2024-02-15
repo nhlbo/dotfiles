@@ -1,7 +1,5 @@
-if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
-
-if [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
-  sessions=$(tmux list-sessions -F "#{session_name}" | grep -v "^vscode")
+if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]] &&  [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
+  sessions=$(tmux list-sessions -F "#{session_name}" | grep "^\d")
 
   if [[ -z "$sessions" ]]; then
     tmux
@@ -9,6 +7,8 @@ if [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
 
   first_session=$(echo "$sessions" | head -n 1)
   tmux attach -t $first_session
+
+  exit
 fi
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then

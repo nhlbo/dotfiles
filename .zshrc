@@ -1,5 +1,5 @@
 if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]] &&  [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
-  sessions=$(tmux list-sessions -F "#{session_name}" | grep "^\d")
+  sessions=$(tmux list-sessions -F "#{session_name}" | grep "^[0-9]")
 
   if [[ -z "$sessions" ]]; then
     tmux

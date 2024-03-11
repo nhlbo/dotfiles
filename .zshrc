@@ -1,10 +1,5 @@
 if [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
-  tmux attach || tmux;
-  exit;
-fi
-
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh)"
+  (tmux attach || tmux) && exit;
 fi
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then

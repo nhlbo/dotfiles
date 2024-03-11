@@ -1,14 +1,10 @@
-if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]] &&  [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
-  sessions=$(tmux list-sessions -F "#{session_name}" | grep "^[0-9]")
+if [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
+  tmux attach || tmux;
+  exit;
+fi
 
-  if [[ -z "$sessions" ]]; then
-    tmux
-  fi
-
-  first_session=$(echo "$sessions" | head -n 1)
-  tmux attach -t $first_session
-
-  exit
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
 fi
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then

@@ -32,11 +32,9 @@ vim.api.nvim_set_keymap("v", "<m-s>", "<esc>:w<cr>", { noremap = true, silent = 
 vim.api.nvim_set_keymap("x", "<tab>", ">gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("x", "<s-tab>", "<gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<s-tab>", "<c-d>", { noremap = true, silent = true })
+
 for i = 1, 9, 1 do
-	vim.keymap.set("n", string.format("<c-t>%s", i), function()
-		local buf = vim.t.bufs[i]
-		if buf and vim.api.nvim_buf_is_valid(buf) then
-			vim.api.nvim_set_current_buf(buf)
-		end
-	end)
+  vim.keymap.set("n", string.format("<A-%s>", i), function()
+    vim.api.nvim_set_current_buf(vim.t.bufs[i])
+  end)
 end

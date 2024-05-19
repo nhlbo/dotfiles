@@ -1,0 +1,3 @@
+[submodule "starter"]
+	path = starter
+	url = git@github.com:nhlbo/starter.git

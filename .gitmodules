@@ -1,3 +1,6 @@
 [submodule "starter"]
 	path = starter
 	url = git@github.com:nhlbo/starter.git
+[submodule "oh-my-posh"]
+	path = oh-my-posh
+	url = git@github.com:nhlbo/oh-my-posh.git

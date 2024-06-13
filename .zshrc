@@ -108,3 +108,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+eval "$(oh-my-posh init zsh --config $HOME/dotfiles/oh-my-posh/themes/M365Princess.omp.json)"

@@ -113,4 +113,5 @@ alias cc="cc-14"
 alias c++="c++-14"
 
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+export KUBE_EDITOR="nvim"
 eval "$(oh-my-posh init zsh --config $HOME/dotfiles/oh-my-posh/themes/M365Princess.omp.json)"

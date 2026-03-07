@@ -111,3 +111,4 @@ export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PA
 export KUBE_EDITOR="nvim"
 eval "$(oh-my-posh init zsh --config $HOME/dotfiles/oh-my-posh/themes/M365Princess.omp.json)"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH=/Users/nhlbo/.opencode/bin:$PATH

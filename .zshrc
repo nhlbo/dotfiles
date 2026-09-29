@@ -10,7 +10,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="${ZSH:-$HOME/.oh-my-zsh}"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -79,7 +79,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(zsh-autosuggestions zsh-vi-mode)
 
-source $ZSH/oh-my-zsh.sh
+# Skip if already loaded (e.g. by home-manager's programs.zsh.oh-my-zsh)
+if ! (( ${+functions[omz]} )) && [ -f "$ZSH/oh-my-zsh.sh" ]; then
+  source "$ZSH/oh-my-zsh.sh"
+fi
 
 # User configuration
 
